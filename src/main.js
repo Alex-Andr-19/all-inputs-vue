@@ -1,5 +1,14 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import router from './router';
+import store from './store';
 
-createApp(App).mount('#app')
+import App from './App.vue';
+import "./style.css";
+
+const Vue = createApp(App);
+Vue.config.silent = true;
+
+Vue.use(store);
+Vue.use(router);
+
+Vue.mount('#app');
