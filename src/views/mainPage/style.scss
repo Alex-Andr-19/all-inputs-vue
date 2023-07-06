@@ -1,0 +1,11 @@
+.mainPage {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: $ui-step * 10;
+
+    &__inputBlock {
+        width: 40%;
+    }
+}

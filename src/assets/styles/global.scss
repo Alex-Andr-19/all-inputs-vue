@@ -6,3 +6,50 @@
 
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+/* ===== Global variables ===== */
+
+$ui-step: 2px;
+
+/* ============================ */
+
+/* ===== Colors variables ===== */
+
+$primary-black: #131313;
+$primary-dark-blue: #3a5d71;
+$primary-easy-blue: #8a91a3;
+$primary-green: #459f9c;
+$primary-white: #fefefe;
+
+$secondary-gray: #cfcfcf;
+$secondary-light-gray: #F5F5F5;
+$secondary-red: #ec5050;
+
+/* ============================ */
+
+/* ===== UI mixins ===== */
+
+@mixin shadow-overflow-text($defaultColor: $primary-white) {
+    position: relative;
+
+    white-space: nowrap;
+
+    display: inline-block;
+    
+    overflow: hidden;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        box-shadow: inset -150px 0 70px -70px $defaultColor;
+    }
+}
+
+/* ===================== */

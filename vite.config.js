@@ -16,6 +16,8 @@ export default defineConfig({
       scss: {
         additionalData: `
             @import "@/assets/styles/global.scss";
+            @import "@/assets/styles/typography.scss";
+            @import "@/assets/styles/transitions-names.scss";
         `,
       }
     }

@@ -1,0 +1,10 @@
+.fromTop-enter-from,
+.fromTop-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.fromTop-enter-active,
+.fromTop-leave-active {
+  transition: 0.5s ease;
+}

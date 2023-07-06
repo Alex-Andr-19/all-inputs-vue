@@ -1,0 +1,66 @@
+.textInput {
+    width: 100%;
+
+    color: $primary-dark-blue;
+
+    display: flex;
+    flex-direction: column;
+    gap: $ui-step * 2;
+
+    &__firstRow {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__label {
+            padding-left: $ui-step * 4.5;
+
+            @include main-secondary-text;
+        }
+
+        &__functionalBlock {
+            cursor: pointer;
+        }
+    }
+
+    &__input {
+        width: 100%;
+
+        padding: $ui-step * 4;
+
+        border: 1px solid $primary-black;
+        border-radius: $ui-step * 6;
+
+        @include main-text;
+    }
+
+    &__additionalBlock {
+        width: 100%;
+        
+        @include main-secondary-text-small;
+
+        display: flex;
+        justify-content: space-between;
+        
+        &__error {
+            width: 50%;
+        
+            color: $secondary-red;
+
+            display: flex;
+            gap: $ui-step * 2;
+        }
+
+        &__description {
+            width: 50%;
+
+            text-align: right;
+        }
+    }
+}
+
+.space {
+    height: 2px;
+}
