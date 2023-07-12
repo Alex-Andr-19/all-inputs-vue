@@ -26,13 +26,17 @@ export default {
                     id: "input-" + (new Date().getTime() + 200),
                     value: "",
                     type: "select",
-                    props: {},
+                    props: {
+                        placeholder: "Choise you answer",
+                    },
                     meta: {
-                        isMulty: false,
+                        label: "selectInput title",
+                        // isMulty: false,
+                        isMulty: true,
                         answers: [
                             {
                                 text: "1",
-                                value: 1,
+                                value: 1234,
                             },
                             {
                                 text: "2",

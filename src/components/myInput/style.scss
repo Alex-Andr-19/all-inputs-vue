@@ -25,6 +25,12 @@
         }
     }
 
+    &__inputBlock {
+        position: relative;
+
+        min-height: calc(28px + 16px + 2px);
+    }
+
     &__additionalBlock {
         width: 100%;
 

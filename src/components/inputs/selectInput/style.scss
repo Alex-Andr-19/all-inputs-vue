@@ -1,0 +1,95 @@
+.selectInput {
+    position: relative;
+
+    width: 100%;
+    
+    border: 1px solid $primary-black;
+    border-radius: $ui-step * 6;
+    
+    transition: border-radius .3s;
+    
+    &.opened {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    &__mainRow {
+        width: 100%;
+    
+        padding: $ui-step * 4;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        cursor: pointer;
+
+        &__answer {
+            @include main-text;
+
+            &.placeholder {
+                color: $placholder-color;
+            }
+        }
+    }
+
+    &__answers {
+        position: absolute;
+        top: 100%;
+        left: -.5px;
+
+        width: calc(100% + 1px);
+
+        background-color: $primary-white;
+        border: 1px solid $primary-black;
+        border-top: 0;
+        border-bottom-right-radius: $ui-step * 6;
+        border-bottom-left-radius: $ui-step * 6;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: auto;
+
+        &__item {
+            width: 100%;
+
+            padding: $ui-step * 4;
+
+            border-top: 1px solid $secondary-gray;
+
+            display: flex;
+            align-items: center;
+            gap: $ui-step * 4;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba($secondary-gray, 0.7);
+            }
+            &:active {
+                background-color: $secondary-gray;
+            }
+
+            &__point {
+                $size: $ui-step * 15;
+                width: $size;
+                height: $size;
+                
+                border: 1px solid $primary-black;
+                border-radius: $ui-step * 4;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                &.multy {
+                    border-radius: 50%;
+                }
+                &.selected {
+                    background-color: rgba($primary-black, .7);
+                }
+            }
+        }
+    }
+}

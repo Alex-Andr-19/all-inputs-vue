@@ -11,15 +11,17 @@
             </div>
         </div>
 
-        <component
-            :is="`input-${type}`"
-        
-            v-model:modelValue="value"
-            
-            :id="id"
-            :meta="meta"
-            :props="props"
-        />
+        <div class="myInput__inputBlock">
+            <component
+                :is="`input-${type}`"
+                
+                v-model:modelValue="value"
+                
+                :id="id"
+                :meta="meta"
+                :props="props"
+            />
+        </div>
         
         <div class="myInput__additionalBlock">
             <Transition name="fromTop">
