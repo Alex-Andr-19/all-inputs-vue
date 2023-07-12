@@ -2,12 +2,17 @@ export default {
     props: {
         id: {
             type: String,
-            default: "input-text-" + new Date().getTime(),
+            default: "input-" + new Date().getTime(),
         },
 
         modelValue: {
             type: String,
             require: true,
+        },
+
+        type: {
+            type: String,
+            default: "text",
         },
 
         meta: {

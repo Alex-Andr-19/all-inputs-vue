@@ -1,0 +1,10 @@
+.textInput {
+    width: 100%;
+
+    padding: $ui-step * 4;
+
+    border: 1px solid $primary-black;
+    border-radius: $ui-step * 6;
+
+    @include main-text;
+}

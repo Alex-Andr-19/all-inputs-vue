@@ -1,7 +1,12 @@
 <template>
     <div class="mainPage">
-        <div class="mainPage__inputBlock">
-            <textInput v-model:modelValue="textInput.value" :meta="textInput.meta" :props="textInput.props">
+        <div v-for="inputData in inputs" :key="inputData.id" class="mainPage__inputBlock">
+            <myInput
+                v-model:modelValue="inputData.value"
+                
+                :type="inputData.type"
+                :meta="inputData.meta" :props="inputData.props"
+            >
                 <template #functionalBlock>
                     functional block
                 </template>
@@ -9,7 +14,7 @@
                 <template #description>
                     description
                 </template>
-            </textInput>
+            </myInput>
         </div>
 
         <div @click="testFunction" class="mainPage__tex">

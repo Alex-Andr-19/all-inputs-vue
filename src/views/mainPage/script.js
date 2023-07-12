@@ -1,29 +1,57 @@
-import textInput from "@/components/textInput/textInput.vue";
+import myInput from "@/components/myInput/myInput.vue";
 
 export default {
     components: {
-        textInput,
+        myInput, 
     },
 
     data() {
         return {
-            textInput: {
-                value: "",
-                props: {
-                    placeholder: "placeholder",
-                    disabled: true,
+            inputs: [
+                {
+                    id: "input-" + new Date().getTime(),
+                    value: "",
+                    type: "text",
+                    props: {
+                        placeholder: "placeholder",
+                        // disabled: true,
+                    },
+                    meta: {
+                        errorText: "",
+                        label: "Input title",
+                    },
                 },
-                meta: {
-                    errorText: "",
-                    label: "Input title",
+    
+                {
+                    id: "input-" + (new Date().getTime() + 200),
+                    value: "",
+                    type: "select",
+                    props: {},
+                    meta: {
+                        isMulty: false,
+                        answers: [
+                            {
+                                text: "1",
+                                value: 1,
+                            },
+                            {
+                                text: "2",
+                                value: 2,
+                            },
+                            {
+                                text: "3",
+                                value: 3,
+                            },
+                        ],
+                    },
                 },
-            },
+            ],
         }
     },
 
     methods: {
         testFunction() {
-            this.textInput.meta.errorText = this.textInput.meta.errorText.length > 0 ? "" : "asdf"
+            this.inputs[0].meta.errorText = this.inputs[0].meta.errorText.length > 0 ? "" : "asdf"
         },
     },
 }
